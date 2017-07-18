@@ -1,11 +1,15 @@
 
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { connect } from 'react-redux'
+import logo from './../logo.svg';
+import './../App.css';
+import { connect } from 'react-redux';
+import User from './../components/User';
+import Page from './../components/Page';
 
 class App extends Component {
-
+  // constructor(props) {
+  //   super(props)
+  // }
   render() {
 
     const { name } = this.props.user;
@@ -14,17 +18,12 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Привет, {name}!</h2>
+          <User name={name} />
         </div>
-        <p className="App-intro">
-          
-          <p>У тебя {photos.length} фото за {year} год</p>
-        </p>
+        <Page photos={photos} year={year} />
       </div>
     );
   }
-
-
 }
 function mapStateToProps(state) {
   return {
