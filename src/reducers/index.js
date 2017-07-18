@@ -1,10 +1,9 @@
 // eslint-disable-next-line
-const initialState = {
-  name: 'Василий',
-  surname: 'Реактов',
-  age: 27
-};
+import { combineReducers } from 'redux'
+import page from './page'
+import user from './user'
 
-export default function userstate(state = initialState) {
-  return state;
-}
+export default combineReducers({
+  page,
+  user
+})
