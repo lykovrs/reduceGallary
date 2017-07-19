@@ -3,9 +3,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 export default class User extends Component {
-    constructor(props) {
-        super(props)
-    }
 
     static PropTypes = {
         name: PropTypes.string.isRquired
